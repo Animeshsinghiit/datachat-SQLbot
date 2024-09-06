@@ -45,9 +45,9 @@ llm = ChatOpenAI(model=gpt_model, temperature=0, openai_api_key=OPENAI_API_KEY)
 # Memory Params
 memory_params = {'llm': llm, 'memory_type': 'window', 'max_token_limit': 2000, 'k': 1}
 
-client = OpenAI(api_key='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')
+client = OpenAI(api_key='#')
 
-pinecone_client = Pinecone(api_key="5ec49a0d-4e4f-4d9c-9cee-1786a045970e")
+pinecone_client = Pinecone(api_key="#")
 index = pinecone_client.Index(pinecone_index)
 
 st.set_page_config(page_title="SQL - DBTalk ", layout="wide")
@@ -58,7 +58,7 @@ def db_init():
     service_account_file = "service-account-key.json" # Change to where your service account key file is located
 
     project = "#
-    dataset = "dt_maven_sample_datasets"
+    dataset = "#"
     table = ["sample_data_sales_dnk","sample_data_marketing_dnk"]
     sqlalchemy_url = f'bigquery://{project}/{dataset}?credentials_path={service_account_file}'
 
