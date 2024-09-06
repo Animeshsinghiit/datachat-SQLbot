@@ -29,11 +29,11 @@ import time
 load_dotenv()
 
 
-pinecone_index = 'seller-intelligence-sqlagent-feedback'
-pinecone_namespace = 'sql_qa_samples'
+pinecone_index = '#'
+pinecone_namespace = '#'
 
-gpt_model = 'ft:gpt-4o-mini-2024-07-18:decision-tree-analytics:m3-lr01:9qiMlVBI' 
-OPENAI_API_KEY = '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' 
+gpt_model = '#' 
+OPENAI_API_KEY = '#' 
 
 # Initialize OpenAI API key
 openai.api_key = OPENAI_API_KEY
@@ -57,7 +57,7 @@ st.set_page_config(page_title="SQL - DBTalk ", layout="wide")
 def db_init():
     service_account_file = "service-account-key.json" # Change to where your service account key file is located
 
-    project = "datachannel-238509"
+    project = "#
     dataset = "dt_maven_sample_datasets"
     table = ["sample_data_sales_dnk","sample_data_marketing_dnk"]
     sqlalchemy_url = f'bigquery://{project}/{dataset}?credentials_path={service_account_file}'
